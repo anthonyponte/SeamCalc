@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SeamCalc</string>
+    <string name="altura_cierre">Altura Cierre (A)</string>
+    <string name="espacio_libre">Espacio Libre (EL)</string>
+    <string name="cero">0</string>
+    <string name="compacidad">Compacidad (%C)</string>
+    <string name="espesor_cierre">Espesor Cierre (E)</string>
+    <string name="espesor_cuerpo">Espesor Cuerpo (Ec)</string>
+    <string name="espesor_tapa">Espesor Tapa (Et)</string>
+    <string name="gancho_cuerpo">Gancho Cuerpo (Gc)</string>
+    <string name="gancho_tapa">Gancho Tapa (Gt)</string>
+    <string name="limpiar">Limpiar</string>
+    <string name="penetracion_gancho_cuerpo">Penetración Gancho Cuerpo (%P)</string>
+    <string name="superposicion">Superposición (%S)</string>
+    <string name="traslape">Traslape (T)</string>
+</resources>

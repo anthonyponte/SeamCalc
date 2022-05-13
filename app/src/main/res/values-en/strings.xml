@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SeamCalc</string>
+    <string name="altura_cierre">Seam Length (L)</string>
+    <string name="espacio_libre">Free Space (Fs)</string>
+    <string name="cero">0</string>
+    <string name="compacidad">Compactness (%C)</string>
+    <string name="espesor_cierre">Seam Thickness (St)</string>
+    <string name="espesor_cuerpo">Body Thickness (Bt)</string>
+    <string name="espesor_tapa">Cover Thickness (Ct)</string>
+    <string name="gancho_cuerpo">Body Hook (Bh)</string>
+    <string name="gancho_tapa">Cover Hook (Ch)</string>
+    <string name="limpiar">Clear</string>
+    <string name="penetracion_gancho_cuerpo">Body Hook Penetration (%P)</string>
+    <string name="superposicion">Overlap Percent (%O)</string>
+    <string name="traslape">Overlap (O)</string>
+</resources>
