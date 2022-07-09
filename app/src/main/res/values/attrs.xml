@@ -20,7 +20,7 @@
     <attr name="colorFillColor" format="color"/>
     <attr name="colorStrokeColor" format="color"/>
 
-    <attr name="colorSucces" format="color"/>
+    <attr name="colorSuccess" format="color"/>
     <attr name="colorWarning" format="color"/>
 
     <!--Label view attributes-->

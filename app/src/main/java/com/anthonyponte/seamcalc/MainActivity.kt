@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
         val colorOnBackground = MaterialColors.getColor(root, R.attr.colorOnBackground)
         val colorError = MaterialColors.getColor(root, R.attr.colorError)
-        val colorSucces = MaterialColors.getColor(root, R.attr.colorSucces)
+        val colorSuccess = MaterialColors.getColor(root, R.attr.colorSuccess)
         val colorWarning = MaterialColors.getColor(root, R.attr.colorWarning)
 
         binding.etEspesorCuerpo.addTextChangedListener(watcher)
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         model = ViewModelProviders.of(this).get(MeasuresViewModel::class.java)
 
-        model.measures.observe(this, { item ->
+        model.measures.observe(this) { item ->
             binding.tvTraslape.text = format(item.traslape)
             binding.tvSuperposicion.text = format(item.superposicion)
             binding.tvPenetracion.text = format(item.penetracion)
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
             binding.tvCompacidad.text = format(item.compacidad)
 
             if (item.traslape >= 1) {
-                binding.tvTraslape.setTextColor(colorSucces)
+                binding.tvTraslape.setTextColor(colorSuccess)
             } else if (item.traslape < 1 && item.traslape != 0.0) {
                 binding.tvTraslape.setTextColor(colorError)
             } else if (item.traslape == 0.0) {
@@ -49,17 +49,17 @@ class MainActivity : AppCompatActivity() {
             }
 
             if (item.superposicion >= 80) {
-                binding.tvSuperposicion.setTextColor(colorSucces)
-            } else if (item.superposicion < 80 && item.superposicion >= 45 && item.superposicion!= 0.0) {
+                binding.tvSuperposicion.setTextColor(colorSuccess)
+            } else if (item.superposicion < 80 && item.superposicion >= 45 && item.superposicion != 0.0) {
                 binding.tvSuperposicion.setTextColor(colorWarning)
-            }else if (item.superposicion < 45 && item.superposicion!= 0.0) {
+            } else if (item.superposicion < 45 && item.superposicion != 0.0) {
                 binding.tvSuperposicion.setTextColor(colorError)
             } else if (item.superposicion == 0.0) {
                 binding.tvSuperposicion.setTextColor(colorOnBackground)
             }
 
             if (item.penetracion >= 95) {
-                binding.tvPenetracion.setTextColor(colorSucces)
+                binding.tvPenetracion.setTextColor(colorSuccess)
             } else if (item.penetracion < 95 && item.penetracion > 70) {
                 binding.tvPenetracion.setTextColor(colorWarning)
             } else if (item.penetracion <= 70 && item.penetracion != 0.0) {
@@ -71,13 +71,13 @@ class MainActivity : AppCompatActivity() {
             if (item.espacioLibre > 0.19) {
                 binding.tvEspacioLibre.setTextColor(colorError)
             } else if (item.espacioLibre <= 0.19 && item.espacioLibre != 0.0) {
-                binding.tvEspacioLibre.setTextColor(colorSucces)
-            } else if (item.espacioLibre == 0.0)  {
+                binding.tvEspacioLibre.setTextColor(colorSuccess)
+            } else if (item.espacioLibre == 0.0) {
                 binding.tvEspacioLibre.setTextColor(colorOnBackground)
             }
 
             if (item.compacidad >= 85) {
-                binding.tvCompacidad.setTextColor(colorSucces)
+                binding.tvCompacidad.setTextColor(colorSuccess)
             } else if (item.compacidad < 85 && item.compacidad >= 75) {
                 binding.tvCompacidad.setTextColor(colorWarning)
             } else if (item.compacidad < 75 && item.compacidad >= 1) {
@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
             } else if (item.compacidad == 0.0) {
                 binding.tvCompacidad.setTextColor(colorOnBackground)
             }
-        })
+        }
 
         binding.btnLimpiar.setOnClickListener {
             val measure = Measures()
